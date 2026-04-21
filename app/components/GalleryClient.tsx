@@ -16,7 +16,9 @@ type Props = {
 };
 
 export default function GalleryClient({ projects }: Props) {
-  const [activeProject, setActiveProject] = useState<GalleryProject | null>(null);
+  const [activeProject, setActiveProject] = useState<GalleryProject | null>(
+    null,
+  );
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const allImages = activeProject
@@ -66,7 +68,7 @@ export default function GalleryClient({ projects }: Props) {
           </p>
           <div className="flex items-end justify-between">
             <h2 className="text-stone-100 font-serif text-3xl md:text-4xl">
-              Projekt
+              Galleri
             </h2>
             <span className="text-stone-600 text-sm tracking-wider hidden sm:block">
               Klicka för att utforska
@@ -91,9 +93,9 @@ export default function GalleryClient({ projects }: Props) {
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               {/* Hover overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500" />
               {/* Titel */}
-              <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400">
+              <div className="absolute bottom-0 left-0 right-0 p-5 md:translate-y-2 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-400">
                 <p className="text-stone-300 text-xs tracking-[0.25em] uppercase mb-1">
                   {project.images.length + 1} bilder
                 </p>
@@ -104,8 +106,20 @@ export default function GalleryClient({ projects }: Props) {
               {/* Liten ikon */}
               <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="w-8 h-8 border border-stone-300/60 flex items-center justify-center">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-stone-200">
-                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    className="text-stone-200"
+                  >
+                    <path
+                      d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </div>
               </div>
@@ -117,14 +131,20 @@ export default function GalleryClient({ projects }: Props) {
       {/* Lightbox */}
       {activeProject && (
         <div className="fixed inset-0 z-[100] bg-stone-950 flex flex-col">
-
           {/* Stäng-knapp uppe till höger */}
           <button
             onClick={close}
             className="absolute top-5 right-5 z-20 text-stone-400 hover:text-stone-100 transition-colors p-2"
             aria-label="Stäng"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+            >
               <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" />
             </svg>
           </button>
@@ -160,8 +180,19 @@ export default function GalleryClient({ projects }: Props) {
                 className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-100 transition-colors p-3 bg-stone-950/40 hover:bg-stone-950/70"
                 aria-label="Föregående"
               >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                >
+                  <path
+                    d="M15 18l-6-6 6-6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </button>
             )}
@@ -173,8 +204,19 @@ export default function GalleryClient({ projects }: Props) {
                 className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-100 transition-colors p-3 bg-stone-950/40 hover:bg-stone-950/70"
                 aria-label="Nästa"
               >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                >
+                  <path
+                    d="M9 18l6-6-6-6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </button>
             )}
@@ -188,7 +230,10 @@ export default function GalleryClient({ projects }: Props) {
             </span>
 
             {/* Thumbnails – horisontell scroll */}
-            <div className="flex gap-2 overflow-x-auto flex-1" style={{ scrollbarWidth: "none" }}>
+            <div
+              className="flex gap-2 overflow-x-auto flex-1"
+              style={{ scrollbarWidth: "none" }}
+            >
               {allImages.map((img, i) => (
                 <button
                   key={i}
@@ -215,8 +260,19 @@ export default function GalleryClient({ projects }: Props) {
               onClick={close}
               className="shrink-0 flex items-center gap-2 border border-stone-600 text-stone-300 text-xs tracking-[0.2em] uppercase px-5 py-2.5 hover:bg-stone-100 hover:text-stone-950 hover:border-stone-100 transition-all duration-300"
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M19 12H5M12 5l-7 7 7 7" strokeLinecap="round" strokeLinejoin="round" />
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              >
+                <path
+                  d="M19 12H5M12 5l-7 7 7 7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
               Tillbaka
             </button>

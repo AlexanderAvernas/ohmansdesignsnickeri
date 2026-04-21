@@ -56,7 +56,7 @@ export default function Footer() {
               Navigering
             </h3>
             <ul className="space-y-3">
-              {["Om mig", "Tjänster", "Galleri", "Kontakt"].map((item) => (
+              {["Om mig", "Tjanster", "Galleri", "Kontakt"].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase().replace(" ", "-")}`}
@@ -77,9 +77,6 @@ export default function Footer() {
           <p className="text-stone-700 text-xs tracking-wider">
             © {currentYear} Öhmans Design & Snickeri. Alla rättigheter
             förbehållna.
-          </p>
-          <p className="text-stone-800 text-xs">
-            Byggd med Next.js & Tailwind CSS
           </p>
         </div>
       </div>

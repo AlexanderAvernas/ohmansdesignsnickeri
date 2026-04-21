@@ -58,7 +58,7 @@ export default async function About() {
                 href="#kontakt"
                 className="inline-block border border-stone-600 text-stone-300 text-sm tracking-[0.2em] uppercase px-7 py-3.5 hover:bg-stone-100 hover:text-stone-950 hover:border-stone-100 transition-all duration-300"
               >
-                Kontakta mig
+                Kontakt
               </a>
             </div>
           </div>

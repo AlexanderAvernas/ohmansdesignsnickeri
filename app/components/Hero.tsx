@@ -75,10 +75,10 @@ export default async function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="#kontakt"
+              href="#tjanster"
               className="inline-block bg-stone-100 text-stone-950 text-sm tracking-[0.2em] uppercase px-8 py-4 hover:bg-white transition-colors duration-300"
             >
-              Begär offert
+              Tjänster
             </a>
             <a
               href="#galleri"
