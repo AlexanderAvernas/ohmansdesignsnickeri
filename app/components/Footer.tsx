@@ -30,10 +30,10 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+46000000000"
+                  href="tel:+46704620131"
                   className="text-stone-300 hover:text-stone-100 text-sm transition-colors duration-300"
                 >
-                  000 – 000 00 00
+                  070 – 462 01 31
                 </a>
               </li>
               <li>
