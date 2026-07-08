@@ -38,10 +38,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@ohmansdesignsnickeri.se"
+                  href="mailto:mathias@ohmansdesignsnickeri.se"
                   className="text-stone-300 hover:text-stone-100 text-sm transition-colors duration-300"
                 >
-                  info@ohmansdesignsnickeri.se
+                  mathias@ohmansdesignsnickeri.se
                 </a>
               </li>
               <li className="text-stone-500 text-sm pt-2">
