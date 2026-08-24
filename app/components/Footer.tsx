@@ -41,7 +41,7 @@ export default function Footer() {
                   href="mailto:mathias@ohmansdesignsnickeri.se"
                   className="text-stone-300 hover:text-stone-100 text-sm transition-colors duration-300"
                 >
-                  mathias@ohmansdesignsnickeri.se
+                  mathias@ohmansdesignsnickeriii.se
                 </a>
               </li>
               <li className="text-stone-500 text-sm pt-2">
